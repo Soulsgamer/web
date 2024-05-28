@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro</title>
+    <link rel="stylesheet" href="styles-foro.css">
+</head>
+<body>
+    <header>
+        <div class="video-container">
+            <video autoplay muted loop id="bgVideo">
+                <source src="nigg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+                <h1>Welcome to the OpMika7 Forum</h1>
+                <p>Discuss and share your thoughts</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="forum">
+            <h2>Forum Discussions</h2>
+            <div id="messages"></div>
+            <form id="messageForm">
+                <input type="text" id="username" placeholder="Your name" required>
+                <textarea id="message" placeholder="Your message" required></textarea>
+                <button type="submit" onclick="event.preventDefault(); renderMesages();  ">Post Message</button>
+            </form>
+        </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="foro.js"></script>
+</body>
+</html>
